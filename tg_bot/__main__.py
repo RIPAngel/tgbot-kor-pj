@@ -343,9 +343,9 @@ def settings_button(bot: Bot, update: Update):
     except BadRequest as excp:
         if excp.message == "Message is not modified":
             pass
-        elif excp.message == "Query_id_invalid":
+        elif excp.message == "잘못된 메시지입니다.":
             pass
-        elif excp.message == "Message can't be deleted":
+        elif excp.message == "메시지를 지울 수 없습니다.":
             pass
         else:
             LOGGER.exception("도움말에 예외가 있어요. %s", str(query.data))
